@@ -1,4 +1,4 @@
-package Vorlesung1von2509;
+package Vorlesung1vom2509;
 
 public class Bankkonto {
     private String inhaber;

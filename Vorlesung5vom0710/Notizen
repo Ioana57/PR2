@@ -1,0 +1,7 @@
+Mitarbeiter mi = new Mitarbeiter();
+Mitarbeiter ma = new Manager();
+Mitarbeiter gf = new Geschäftsführer();
+
+ArrayList<Mitarbeiter> mas = new ArrayList<>();
+mas.add(gf);
+mas.get(0);

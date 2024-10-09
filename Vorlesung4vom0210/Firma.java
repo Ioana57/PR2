@@ -15,19 +15,38 @@ public class Firma {
         System.out.println(ma.toString());		// wieder die Methode von Object
         System.out.println(ma.getDetails());
 
+
+
         Firma hal = new Firma();
         hal.mitarbeiterEinstellen(mi);
         hal.mitarbeiterEinstellen(ma);
         hal.mitarbeiterEinstellen(new Mitarbeiter("Mayer", "12.12.1999"));
 
-        //ma = mi; //geht nicht!
-        mi = ma;
+        System.out.println(ma.getAbteilung());
+        //ma = mi; //geht nicht!, down-cast muss mit (typ) eingegeben werden
+        mi = ma; // Upcast
+        //System.out.println(mi.getAbteilung()); -> geht nicht, weil Typ Mitarbeiter von mi "filtert" die Methode weg
         System.out.println(mi.getGehalt());
         System.out.println(ma.getAbteilung());
         //System.out.println(mi.getAbteilung()); //geht nicht! wg. statischem Typ Mitarbeiter
-        if (mi instanceof Manager) {
+
+        Mitarbeiter[] angestellte = new Mitarbeiter[5];
+        angestellte[0] = mi;
+        angestellte[1] = ma; //sinnvollerer Upcast
+
+        Object[] instanzen = new Object[5];
+        instanzen[0] = mi;
+        instanzen[1] = ma;
+
+
+        if (mi instanceof Manager) { //Downcast immer prüfen!
+            ma = (Manager) mi; //Downcast mit (typ)
         System.out.println(((Manager)mi).getAbteilung());
         }
+
+        //Klausurfragen gerne gefragt
+        //Manager gf = (Manager) new Mitarbeiter("Schmitt", "12.01.1975");
+        //Fehlermeldung, class Mitarbeiter cannot be cast to class Manager
     }
 
     private void mitarbeiterEinstellen(Mitarbeiter m){

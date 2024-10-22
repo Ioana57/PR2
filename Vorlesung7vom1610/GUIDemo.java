@@ -25,16 +25,58 @@ public class GUIDemo implements ActionListener {
         jf.pack();
         jf.setVisible(true);
 
-        GUIDemo obj = new GUIDemo();
+        //GUIDemo obj = new GUIDemo();
+
+        GUIDemo gd = new GUIDemo();
+        ActionListener obj = gd.new MyActionListener();
         jb2.addActionListener(obj);
         jb1.addActionListener(obj);
+
+        //obj.printSomething(); -> geht nicht, weil obj vom Typ ActionListener ist und sieht
+        //nur die Methode actionPerformed, während GUIDemo obj die ganze Klasse sehen würde
+
+        //GUIDemo gd = (GUIDemo) obj; //Downcast
+
 
         System.out.println("blah");
     }
 
-    @Override
+    /*@Override
     public void actionPerformed(ActionEvent e) {
+        //this.printSomething();
         JButton src = (JButton) e.getSource();
         System.out.println("Button geklickt: " + src.getText());
+    }*/
+
+
+    public void printSomething(){
+        System.out.println("Something!");
+        MyActionListener mal = new MyActionListener();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
+
+
+    // non-static member class
+     class MyActionListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //this.printSomething();
+            JButton src = (JButton) e.getSource();
+            System.out.println("Button geklickt: " + src.getText());
+        }
+    }
+
+    public MyActionListener getAL(){
+        return new GUIDemo().new MyActionListener();
+    }
+} // Ende GUIDemo
+
+class NichtMemberClass {
+    public NichtMemberClass(){
+        GUIDemo.MyActionListener mal = new GUIDemo().getAL();
     }
 }

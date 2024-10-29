@@ -9,6 +9,6 @@ package Testat2Uebung;
     }
 
     public void speak(){
-        System.out.println(" me speaks ");
-    }
-}
+        System.out.println("me speaks.");
+    };
+ }

@@ -10,6 +10,7 @@ public enum Planet {
     public static void main (String [] args) {
         System.out.println("Hallo Planeten!");
         System.out.println(Planet.MERKUR.name());
+        System.out.println(Planet.valueOf("VENUS"));
 
         System.out.println(ERDE == MARS);
 

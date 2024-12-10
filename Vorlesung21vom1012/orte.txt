@@ -1,0 +1,16 @@
+Mannheim,Ludwigshafen,3
+Mannheim,Heidelberg,19
+Ludwigshafen,Speyer,24
+Heidelberg,Weinheim,20
+Mannheim,Weinheim,17
+Ludwigshafen,Frankthal,13
+Frankenthal,Worms,11
+Worms,Grünstadt,22
+Grünstadt,Kaiserslautern,40
+Kaiserslautern,Neustadt,40
+Neustadt,Speyer,27
+Neustadt,Ludwigshafen,32
+Bad Dürkheim,Neustadt,19
+Bad Dürkheim,Grünstadt,15
+Bad Dürkheim,Ludwigshafen,21
+Speyer,Heidelberg,28

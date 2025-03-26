@@ -1,0 +1,13 @@
+package IB3.Binärbäume;
+
+public class Main {
+    public static void main(String[] args) {
+        Baum baum = new Baum();
+        baum.add(7);
+        baum.add(9);
+        baum.add(5);
+        baum.add(12);
+        baum.add(8);
+        System.out.println(baum.toString());
+    }
+}

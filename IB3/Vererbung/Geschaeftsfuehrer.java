@@ -1,7 +1,5 @@
 package IB3.Vererbung;
 
-import java.util.Date;
-
 public class Geschaeftsfuehrer extends Manager {
     public boolean prokura;
 

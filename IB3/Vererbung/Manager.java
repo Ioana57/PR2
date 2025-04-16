@@ -1,7 +1,5 @@
 package IB3.Vererbung;
 
-import java.util.Date;
-
 public class Manager extends Mitarbeiter {
     public String abteilung;
 

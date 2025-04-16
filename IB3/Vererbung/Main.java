@@ -15,7 +15,7 @@ public class Main {
         Manager ma = new Geschaeftsfuehrer("Stromberg", 10000, "01.01.1956", "IT");
         Mitarbeiter mi2 = new Manager("Mayer", 5500, "06.04.1998", "IT");
 
-        ArrayList<Mitarbeiter> team = new ArrayList<Mitarbeiter>();
+        ArrayList<Mitarbeiter> team = new ArrayList<>();
         team.add(mi);
         team.add(ma);
         team.add(mi2);

@@ -1,7 +1,5 @@
 package IB3.Vererbung;
 
-import java.util.Date;
-
 public class Mitarbeiter {
     public String name;
     public double gehalt;
